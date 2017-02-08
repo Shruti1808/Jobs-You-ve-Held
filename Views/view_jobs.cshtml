@@ -1,6 +1,7 @@
 <h1>Previous Jobs</h1>
-
-<p>@Model.GetjobTitle()</p>
-<p>@Model.GetjobDescription()</p>
-<p>@Model.GettimePeriod()</p>
-<p><a href="/view_jobs">View My Jobs</a></p>
+@foreach(var job in Model) {
+  <p>@job.GetjobTitle()</p>
+  <p>@job.GetjobDescription()</p>
+  <p>@job.GettimePeriod()</p>
+}
+<p><a href="/">Add another job!</a></p>

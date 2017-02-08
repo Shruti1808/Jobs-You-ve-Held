@@ -7,7 +7,7 @@ namespace Jobs.Objects
     private string _jobTitle;
     private string _jobDescription;
     private string _timePeriod;
-    private static List<string> _jobDetails = new List<string> {};
+    private static List<Job> _jobDetails = new List<Job> {};
 
     public Job (string jobTitle, string jobDescription, string timePeriod)
     {
@@ -39,13 +39,13 @@ namespace Jobs.Objects
     {
       _timePeriod = newtimePeriod;
     }
-    public static List<string> GetAll()
+    public static List<Job> GetAll()
     {
       return _jobDetails;
     }
     public void Save()
     {
-      _jobDetails.Add(_jobTitle, _jobDescription, _timePeriod);
+      _jobDetails.Add(this);
     }
   }
 }
