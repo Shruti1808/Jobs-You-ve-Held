@@ -47,5 +47,9 @@ namespace Jobs.Objects
     {
       _jobDetails.Add(this);
     }
+    public static void ClearAll()
+{
+  _jobDetails.Clear();
+}
   }
 }

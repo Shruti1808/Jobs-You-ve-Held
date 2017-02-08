@@ -20,6 +20,10 @@ namespace Jobs
         newJob.Save();
         return View["view_jobs.cshtml", Job.GetAll()];
       };
+      Post["/jobs_cleared"] = _ => {
+          Job.ClearAll();
+          return View["jobs_cleared.cshtml"];
+        };
      }
   }
 }
